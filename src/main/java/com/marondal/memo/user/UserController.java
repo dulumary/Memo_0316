@@ -12,5 +12,12 @@ public class UserController {
 	public String signupInput() {
 		return "user/signup";
 	}
+	
+	@GetMapping("/signin/view")
+	public String signinInput() {
+		return "user/signin";
+	}
+	
+	
 
 }
