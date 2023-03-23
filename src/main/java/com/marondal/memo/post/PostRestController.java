@@ -25,7 +25,7 @@ public class PostRestController {
 	public Map<String, String> postCreate(
 			@RequestParam("title") String title
 			, @RequestParam("content") String content
-			, @RequestParam("file") MultipartFile file
+			, @RequestParam(value="file", required=false) MultipartFile file
 			, HttpSession session) {
 		
 		int userId = (Integer)session.getAttribute("userId");

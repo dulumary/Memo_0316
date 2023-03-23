@@ -16,6 +16,10 @@ public class FileManagerService {
 	
 	public static String saveFile(int userId, MultipartFile file) {
 		
+		if(file == null) {
+			return null;
+		}
+		
 		// 사용자 별로 폴더를 구분
 		// 시간을 포함해서 폴더를 구분
 		// UNIX TIME : 1970년 1월 1일 부터 흐른 시간을 (milli second 1/1000)
